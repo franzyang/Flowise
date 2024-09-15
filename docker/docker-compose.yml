@@ -33,8 +33,6 @@ services:
             - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT}
             - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY}
             - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
-        ports:
-            - '${PORT}:${PORT}'
         volumes:
             - ~/.flowise:/root/.flowise
         entrypoint: /bin/sh -c "sleep 3; flowise start"
